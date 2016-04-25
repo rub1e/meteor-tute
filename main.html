@@ -1,0 +1,22 @@
+<head>
+  <title>tute</title>
+</head>
+
+<body>
+  {{> loginButtons}}
+  <p>
+    User: {{loggedInName}}
+  </p>
+  <div id="messages">
+    <ul>
+      {{#each messagesArray}}
+        <li {{stylings}}>{{poster}}: {{text}}</li>
+      {{/each}}
+    </ul>
+  </div>
+
+  <form id="form_id">
+    <input type="text" id="text">
+    <input type="submit" value="Submit">
+  </form>
+</body>
