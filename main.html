@@ -4,9 +4,13 @@
 
 <body>
   {{> loginButtons}}
-  <p>
-    User: {{loggedInName}}
-  </p>
+
+  {{#if currentUser}}
+    <p>
+      User: {{loggedInName}}
+    </p>
+  {{/if}}
+
   <div id="messages">
     <ul>
       {{#each messagesArray}}
